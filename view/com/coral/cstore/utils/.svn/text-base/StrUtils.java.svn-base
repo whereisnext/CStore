@@ -1,0 +1,15 @@
+/**
+ * 
+ */
+package com.coral.cstore.utils;
+
+/**
+ * @author Coral
+ *
+ */
+public class StrUtils {
+
+	public static String tabTitle(String title) {
+		return "   " + title +"   "; 
+	}
+}

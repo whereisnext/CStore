@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/svn/!svn/ver/3/cstore/view/com/coral/cstore/view/biz
+END
+CreateCustomerTabView.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/8/cstore/view/com/coral/cstore/view/biz/CreateCustomerTabView.java
+END
+CreateSupplierTabView.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/8/cstore/view/com/coral/cstore/view/biz/CreateSupplierTabView.java
+END
+ManageCustomerTabView.java
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/!svn/ver/8/cstore/view/com/coral/cstore/view/biz/ManageCustomerTabView.java
+END

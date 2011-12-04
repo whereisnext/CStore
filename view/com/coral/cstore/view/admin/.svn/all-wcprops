@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/svn/!svn/ver/3/cstore/view/com/coral/cstore/view/admin
+END
+CreateUserTabView.java
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/!svn/ver/8/cstore/view/com/coral/cstore/view/admin/CreateUserTabView.java
+END
+SystemSetupTabView.java
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/!svn/ver/8/cstore/view/com/coral/cstore/view/admin/SystemSetupTabView.java
+END
+ChangePasswordTabView.java
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/!svn/ver/8/cstore/view/com/coral/cstore/view/admin/ChangePasswordTabView.java
+END

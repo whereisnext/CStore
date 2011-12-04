@@ -1,0 +1,398 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<mapping>
+  <mapping-handler name="GenRiskcatePremSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.GenRiskcatePremBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.GenRiskcatePremSOABO"/>
+  <mapping-handler name="MarineLimitSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.MarineLimitBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.MarineLimitSOABO">
+    <attribute bo="PrdtCtId" soabo="productCoverTypeId"/>
+    <attribute bo="PubCmdtyDesc" soabo="publicCommodityDescription"/>
+    <attribute bo="PubCmdtyId" soabo="publicCommodityId"/>
+    <attribute bo="PubCmdtyTypeId" soabo="publicCommodityTypeId"/>
+  </mapping-handler>
+  <mapping-handler name="GenCtFeeSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.GenCtFeeBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.GenCtFeeSOABO">
+    <attribute bo="CtFeeId" soabo="coverTypeFeeId"/>
+  </mapping-handler>
+  <mapping-handler name="EndorsementSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.EndorsementBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.EndorsementSOABO">
+    <attribute bo="CancelTypeId" soabo="cancelFromInceptionOrMidterm"/>
+    <attribute bo="CommChangeReason" soabo="commissionChangeReason"/>
+    <attribute bo="EffDate" soabo="effectiveDate"/>
+    <attribute bo="EndoCode" soabo="endorsementNumber"/>
+    <attribute bo="EndoId" soabo="endorsementId"/>
+    <attribute bo="EndoLevel" soabo="endorsementLevel"/>
+    <attribute bo="IndexNum" soabo="indexNumber"/>
+    <attribute bo="LastUwLevel" soabo="lastUunerwritingLevel"/>
+    <attribute bo="LastUwOrganId" soabo="lastUnderwritingOrganId"/>
+    <attribute bo="PoiAltReason" soabo="poiAlterationReason"/>
+    <attribute bo="PoiAltTypeId" soabo="poiAlterationType"/>
+    <attribute bo="UwOperId" soabo="underwritingOperatorId"/>
+  </mapping-handler>
+  <mapping-handler name="MasterPolicyDepositHistorySOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.MasterPolicyDepositHistoryBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.MasterPolicyDepositHistorySOABO">
+    <attribute bo="ChgeReason" soabo="changeReason"/>
+    <attribute bo="DpstAmtAfChge" soabo="deposttAmountAfterChange"/>
+    <attribute bo="DpstAmtBfChge" soabo="deposttAmountBeforeChange"/>
+  </mapping-handler>
+  <mapping-handler name="PolicyDebitNoteSplitSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.PolicyDebitNoteSplitBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.PolicyDebitNoteSplitSOABO"/>
+  <mapping-handler name="AddressInsuredSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.AddressInsuredBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.AddressInsuredSOABO">
+    <attribute bo="AccountNo" soabo="bankAccountNumber"/>
+    <attribute bo="BusinessCode" soabo="businessNatureCode"/>
+    <attribute bo="ContentsOccupied" soabo="tradeClassification"/>
+    <attribute bo="CorporationNo" soabo="organizatoinNumber"/>
+    <attribute bo="MaintainEffectiveDate" soabo="effectiveDateforMaintenancePeriod"/>
+    <attribute bo="MaintainExpiryDate" soabo="expiryDateforMaintenancePeriod"/>
+    <attribute bo="ProprietorNric" soabo="proprietorIdentificationNumber"/>
+  </mapping-handler>
+  <mapping-handler name="QuoteInfoSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.QuoteInfoBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.QuoteInfoSOABO">
+    <attribute bo="AgentOtherContactName" soabo="otherCcontactorofSalesChannel"/>
+    <attribute bo="ClassId" soabo="motorClassId"/>
+    <attribute bo="EatAdjFlag" soabo="estimatedAnnualTurnoverFlag"/>
+    <attribute bo="EndoUptFlag" soabo="endorsementUpdateFlag"/>
+    <attribute bo="ExternalRefno" soabo="externalReferalNumber"/>
+    <attribute bo="LastAnp" soabo="anpofQuotation"/>
+    <attribute bo="LastSnp" soabo="snpofQuotation"/>
+    <attribute bo="OfficeTelOfCustomer" soabo="officeTelephoneNumberofCustomer"/>
+    <attribute bo="OfficeTelOfSalesChannel" soabo="officeTelephoneNumberofSalesChannel"/>
+    <attribute bo="OtherInsuredInfo" soabo="otherInsuredInformation"/>
+    <attribute bo="PagerNoOfCustomer" soabo="pagerNumberofCustomer"/>
+    <attribute bo="PagerNoOfSalesChannel" soabo="pagerNumberofSalesChannel"/>
+    <attribute bo="SendToFlag" soabo="sendQuotationtoWhom"/>
+    <attribute bo="TelephoneNoOfCustomer" soabo="TelephoneNumberofCustomer"/>
+    <attribute bo="TelephoneNoOfSalesChannel" soabo="TelephoneNumberofSalesChannel"/>
+    <attribute bo="UwOtherFactor" soabo="underwritingOtherFactor"/>
+    <attribute bo="UwReason" soabo="underwritingReason"/>
+    <attribute bo="VoucherNo" soabo="voucherNumber"/>
+  </mapping-handler>
+  <mapping-handler name="SubmPolicySOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.SubmPolicyBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.SubmPolicySOABO"/>
+  <mapping-handler name="PolicyBPFeeSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.PolicyBPFeeBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.PolicyBPFeeSOABO">
+    <attribute bo="BpFeeId" soabo="bindingPeriodFeeId"/>
+    <attribute bo="BpId" soabo="bindingPeriodId"/>
+    <attribute bo="DeltaAmount" soabo="deltaAmount"/>
+    <attribute bo="FeeType" soabo="feeType"/>
+    <attribute bo="PartyId" soabo="partyId"/>
+    <attribute bo="PayMode" soabo="payMode"/>
+    <attribute bo="RoleType" soabo="roleType"/>
+  </mapping-handler>
+  <mapping-handler name="PolicyCtAcceSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.PolicyCtAcceBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.PolicyCtAcceSOABO">
+    <attribute bo="AdditionalDesc" soabo="AdditionalDescription"/>
+  </mapping-handler>
+  <mapping-handler name="PolicyBPSplitFeeSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.PolicyBPSplitFeeBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.PolicyBPSplitFeeSOABO">
+    <attribute bo="BpEffDate" soabo="bindingPeriodEffectiveDate"/>
+    <attribute bo="BpExpDate" soabo="bindingPeriodExpiryDate"/>
+    <attribute bo="BpFeeId" soabo="bindingPeriodFeeId"/>
+    <attribute bo="BpId" soabo="bindingPeriodId"/>
+    <attribute bo="BpSeq" soabo="bindingPeriodSequence"/>
+  </mapping-handler>
+  <mapping-handler name="MarinePackingSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.MarinePackingBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.MarinePackingSOABO"/>
+  <mapping-handler name="PersonInsuredSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.PersonInsuredBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.PersonInsuredSOABO">
+    <attribute bo="Institution" soabo="educationInstitution"/>
+    <attribute bo="NewIdNumber" soabo="identificationNumber"/>
+    <attribute bo="Relation" soabo="relationshipWithInsured"/>
+    <attribute bo="StudyCountryName" soabo="studyAbroadonWhichCountry"/>
+    <attribute bo="WorkPermitNumber" soabo="workLicenseNumber"/>
+  </mapping-handler>
+  <mapping-handler name="SubmissionSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.SubmissionBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.SubmissionSOABO">
+    <attribute bo="EffDate" soabo="effectiveDate"/>
+    <attribute bo="ExpDate" soabo="expiryDate"/>
+    <attribute bo="UwYear" soabo="underwritingYear"/>
+  </mapping-handler>
+  <mapping-handler name="VehicleInsuredSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.VehicleInsuredBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.VehicleInsuredSOABO">
+    <attribute bo="Chassis" soabo="chasisNumber"/>
+    <attribute bo="ClaimAmt" soabo="claimAmount"/>
+    <attribute bo="ClaimNo" soabo="claimNumber"/>
+    <attribute bo="CompanyOfferingLoan" soabo="financeCompanyName"/>
+    <attribute bo="EngineNo" soabo="engineNumber"/>
+    <attribute bo="LogBookNo" soabo="registrationNumber"/>
+    <attribute bo="PassengeNo" soabo="numberofPassengers"/>
+    <attribute bo="ProposalType" soabo="proposalTypeofMotorTrade"/>
+    <attribute bo="SeatNo" soabo="numberofSeats"/>
+  </mapping-handler>
+  <mapping-handler name="MasterPolicyCustSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.MasterPolicyCustBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.MasterPolicyCustSOABO"/>
+  <mapping-handler name="PolicyCommRateSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.PolicyCommRateBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.PolicyCommRateSOABO">
+    <attribute bo="rate" soabo="commissoinRate"/>
+    <attribute bo="riskcat" soabo="riskCategory"/>
+  </mapping-handler>
+  <mapping-handler name="GenPolicyInstSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.GenPolicyInstBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.GenPolicyInstSOABO"/>
+  <mapping-handler name="EmploymentPersonSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.EmploymentPersonBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.EmploymentPersonSOABO">
+    <attribute bo="BusiNatureCode" soabo="businessNatureCode"/>
+    <attribute bo="DelFlag" soabo="deletionFlag"/>
+    <attribute bo="EmptCode" soabo="employmentCode"/>
+    <attribute bo="EmptName" soabo="employmentName"/>
+    <attribute bo="SeqNum" soabo="sequenceNumber"/>
+  </mapping-handler>
+  <mapping-handler name="PolicyGuarantorSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.PolicyGuarantorBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.PolicyGuarantorSOABO">
+    <attribute bo="PolGuarId" soabo="policyGuaranteeId"/>
+  </mapping-handler>
+  <mapping-handler name="MasterPolicyPaymentSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.MasterPolicyPaymentBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.MasterPolicyPaymentSOABO">
+    <attribute bo="CertiCode" soabo="cetificateCode"/>
+    <attribute bo="CertiType" soabo="certificateType"/>
+    <attribute bo="CreditExpDate" soabo="creditCardExpDate"/>
+    <attribute bo="CreditHolder" soabo="creditCardHolder"/>
+    <attribute bo="CreditNo" soabo="creditCardNo"/>
+    <attribute bo="CreditToAgent" soabo="creditToAgent"/>
+    <attribute bo="EndoId" soabo="endorsementId"/>
+  </mapping-handler>
+  <mapping-handler name="PolicyCtSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.PolicyCtBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.PolicyCtSOABO">
+    <attribute bo="Agp" soabo="actualGrossPremium"/>
+    <attribute bo="Anp" soabo="actualNetPremium"/>
+    <attribute bo="Api" soabo="adjustedPremiumIncome"/>
+    <attribute bo="CtId" soabo="coverTypeId"/>
+    <attribute bo="Pi" soabo="premiumIncome"/>
+    <attribute bo="PremCurAgp" soabo="premCurActualGrossPremium"/>
+    <attribute bo="PremCurAnp" soabo="premCurActualNettPremium"/>
+    <attribute bo="PremCurApi" soabo="premCurAdjustedPremiumIncome"/>
+    <attribute bo="PremCurPi" soabo="premCurPremiumIncome"/>
+    <attribute bo="PremCurSgp" soabo="premCurStandardGrossPremium"/>
+    <attribute bo="PremCurSnp" soabo="premCurStandardNetPremium"/>
+    <attribute bo="RealAgp" soabo="realActualGrossPremium"/>
+    <attribute bo="RealAnp" soabo="realAdjustedNetPremium"/>
+    <attribute bo="RealApa" soabo="realAdjustedPremiumAfterTax"/>
+    <attribute bo="RealApi" soabo="realAdjustedPremiumIncome"/>
+    <attribute bo="RealApt" soabo="realAdjustedPremiumIncludingServiceTax"/>
+    <attribute bo="Sgp" soabo="standardGrossPremium"/>
+    <attribute bo="SiCurAgp" soabo="siCurActualGrossPremium"/>
+    <attribute bo="SiCurAnp" soabo="siCurActualNettPremium"/>
+    <attribute bo="SiCurApi" soabo="siCurAdjustedPremiumIncome"/>
+    <attribute bo="SiCurPi" soabo="siCurPremiumIncome"/>
+    <attribute bo="SiCurSgp" soabo="siCurStandardGrossPremium"/>
+    <attribute bo="SiCurSnp" soabo="siCurStandardNettPremium"/>
+    <attribute bo="Snp" soabo="standardNetPremium"/>
+  </mapping-handler>
+  <mapping-handler name="MarineInsuredSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.MarineInsuredBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.MarineInsuredSOABO">
+    <attribute bo="ArricalDate" soabo="arrivalDate"/>
+    <attribute bo="PackType" soabo="packingType"/>
+    <attribute bo="TranshipFlag" soabo="transhipmentorNot"/>
+    <attribute bo="TranshipPlaceDesciption" soabo="transhipmentPlace"/>
+    <attribute bo="TranshipType" soabo="transhipmentType"/>
+  </mapping-handler>
+  <mapping-handler name="CtBindingPeriodSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.CtBindingPeriodBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.CtBindingPeriodSOABO">
+    <attribute bo="BpEffDate" soabo="bindingPeriodEffectiveDate"/>
+    <attribute bo="BpExpDate" soabo="bindingPeriodExpiryDate"/>
+    <attribute bo="BpSeq" soabo="bindingPeriodSequence"/>
+    <attribute bo="BpStatus" soabo="bindingPeriodStatus"/>
+    <attribute bo="CtBpId" soabo="ctBindingPeriodId"/>
+    <attribute bo="DeltaIabp" soabo="deltaInstallmentActualBookingPremium"/>
+    <attribute bo="DeltaIagp" soabo="deltaInstallmentActualGrossPremium"/>
+    <attribute bo="DeltaIapp" soabo="deltaInstallmentActualPremiumPayable"/>
+    <attribute bo="DeltaIsnp" soabo="deltaInstallmentActualNetPremium"/>
+    <attribute bo="Iabp" soabo="InstallmentActualBookingPremium"/>
+    <attribute bo="Iagp" soabo="InstallmentActualGrossPremium"/>
+    <attribute bo="Iapp" soabo="InstallmentActualPremiumPayable"/>
+    <attribute bo="Isnp" soabo="InstallmentActualNetPremium"/>
+    <attribute bo="PyId" soabo="policyYearId"/>
+  </mapping-handler>
+  <mapping-handler name="ClaimSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.ClaimBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.ClaimSOABO">
+    <attribute bo="AcciDate" soabo="accidentDate"/>
+    <attribute bo="ClaimAmt" soabo="claimAmount"/>
+    <attribute bo="ClaimDesc" soabo="claimDescription"/>
+    <attribute bo="SeqNum" soabo="sequenceNumber"/>
+  </mapping-handler>
+  <mapping-handler name="PolicyGenCustSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.PolicyGenCustBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.PolicyGenCustSOABO"/>
+  <mapping-handler name="MarineCoverTypeSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.MarineCoverTypeBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.MarineCoverTypeSOABO">
+    <attribute bo="MrnCtId" soabo="marineCoverTypeId"/>
+    <attribute bo="PrdtCtId" soabo="productCoverTypeId"/>
+  </mapping-handler>
+  <mapping-handler name="GenCoPolicySOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.GenCoPolicyBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.GenCoPolicySOABO"/>
+  <mapping-handler name="MarineVoyageInsuredSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.MarineVoyageInsuredBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.MarineVoyageInsuredSOABO">
+    <attribute bo="DestCityName" soabo="destinationCityName"/>
+    <attribute bo="DestCountryCode" soabo="destinationCountryCode"/>
+    <attribute bo="DestCountryName" soabo="destinationCountryName"/>
+    <attribute bo="DestRegionCode" soabo="destinationRegionCode"/>
+    <attribute bo="DestRegionName" soabo="destinationRegionName"/>
+  </mapping-handler>
+  <mapping-handler name="MDriverSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.MDriverBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.MDriverSOABO">
+    <attribute bo="CertiNo" soabo="driverCertificateNo"/>
+    <attribute bo="Dob" soabo="dateOfBirth"/>
+    <attribute bo="Name" soabo="driverName"/>
+    <attribute bo="NewidNo" soabo="newIdNo"/>
+    <attribute bo="OccuType" soabo="occupationOfMainDriver"/>
+    <attribute bo="RegDate" soabo="drivingLicenseRegisterDate"/>
+    <attribute bo="TypeId" soabo="iDType"/>
+  </mapping-handler>
+  <mapping-handler name="MarineConveyanceSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.MarineConveyanceBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.MarineConveyanceSOABO"/>
+  <mapping-handler name="PolicyYearSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.PolicyYearBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.PolicyYearSOABO">
+    <attribute bo="DeltaPyAbp" soabo="deltaPolicyYearActualBookingPremium"/>
+    <attribute bo="DeltaPyAgp" soabo="deltaPolicyYearActualGrossPremium"/>
+    <attribute bo="DeltaPyApp" soabo="deltaPolicyYearActualPremiumPayable"/>
+    <attribute bo="DeltaPySnp" soabo="deltaPolicyYearStandardNetlPremium"/>
+    <attribute bo="IsCpy" soabo="currentPolicyYearorNot"/>
+    <attribute bo="PyAbp" soabo="policyYearActualBookingPremium"/>
+    <attribute bo="PyAgp" soabo="policyYearActualGrossPremium"/>
+    <attribute bo="PyApp" soabo="policyYearActualPremiumPayable"/>
+    <attribute bo="PyEffDate" soabo="polciyEffectiveDate"/>
+    <attribute bo="PyExpDate" soabo="policyExpiryDate"/>
+    <attribute bo="PyId" soabo="policYearId"/>
+    <attribute bo="PySeq" soabo="policyYearSequence"/>
+    <attribute bo="PySnp" soabo="policyYearStandardNetPremium"/>
+  </mapping-handler>
+  <mapping-handler name="GenRiskcateRatioSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.GenRiskcateRatioBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.GenRiskcateRatioSOABO"/>
+  <mapping-handler name="BindingPeriodSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.BindingPeriodBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.BindingPeriodSOABO">
+    <attribute bo="BpEffDate" soabo="bindingPeriodEffectiveDate"/>
+    <attribute bo="BpExpDate" soabo="bindingPeriodExpiryDate"/>
+    <attribute bo="BpId" soabo="bindingPeriodId"/>
+    <attribute bo="BpSeq" soabo="bindingPeriodSequence"/>
+    <attribute bo="BpStatus" soabo="bindingPeriodStatus"/>
+    <attribute bo="DeltaIabp" soabo="deltaInstallmentActualBookingPremium"/>
+    <attribute bo="DeltaIagp" soabo="deltaInstallmentActualGrossPremium"/>
+    <attribute bo="DeltaIapp" soabo="deltaInstallmentActualPremiumPayable"/>
+    <attribute bo="DeltaIsnp" soabo="deltaInstallmentStandardNetPremium"/>
+    <attribute bo="Iabp" soabo="installmentActualBookingPremium"/>
+    <attribute bo="Iagp" soabo="installmentActualGrossPremium"/>
+    <attribute bo="Iapp" soabo="installmentActualPremiumPayable"/>
+    <attribute bo="Isnp" soabo="installmentStandardNetPremium"/>
+    <attribute bo="PyId" soabo="policyYearId"/>
+  </mapping-handler>
+  <mapping-handler name="PolicyClauseSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.PolicyClauseBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.PolicyClauseSOABO"/>
+  <mapping-handler name="PolicyDiscSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.PolicyDiscBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.PolicyDiscSOABO"/>
+  <mapping-handler name="CoInsurerListSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.CoInsurerListBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.CoInsurerListSOABO"/>
+  <mapping-handler name="CtBPFeeSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.CtBPFeeBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.CtBPFeeSOABO">
+    <attribute bo="CtBpFeeId" soabo="ctBindingPeriodFeeId"/>
+    <attribute bo="CtBpId" soabo="ctBindingPeriodId"/>
+  </mapping-handler>
+  <mapping-handler name="MasterPolicySOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.MasterPolicyBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.MasterPolicySOABO">
+    <attribute bo="Aac" soabo="actualAnnualCarryiing"/>
+    <attribute bo="AdjustFlag" soabo="annualPremiumAdjustedOrNot"/>
+    <attribute bo="DerivType" soabo="policyDeriveType"/>
+    <attribute bo="Eac" soabo="estimatedAnnualCarrying"/>
+    <attribute bo="EffDate" soabo="effectiveDate"/>
+    <attribute bo="ExpDate" soabo="expiryDate"/>
+    <attribute bo="UpgRenewDoneFlag" soabo="whetherFinishUpgradeorRenewal"/>
+    <attribute bo="VerSeq" soabo="versionSequence"/>
+  </mapping-handler>
+  <mapping-handler name="PolicySOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.PolicyBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.PolicySOABO">
+    <attribute bo="AccepterId" soabo="issueUserId"/>
+    <attribute bo="AccepterOrganId" soabo="organizationIdofIssueUser"/>
+    <attribute bo="AgentCate" soabo="agentCategory"/>
+    <attribute bo="AgentTel" soabo="agentTelephoneNumber"/>
+    <attribute bo="Agp" soabo="actualGrossPremium"/>
+    <attribute bo="Anp" soabo="actualNettPremium"/>
+    <attribute bo="App" soabo="actualPremiumPayable"/>
+    <attribute bo="BranchTel" soabo="branchTelelphoneNumber"/>
+    <attribute bo="CreatorOrgan" soabo="creatorOrganization"/>
+    <attribute bo="DerivationType" soabo="sourceofPolicy"/>
+    <attribute bo="DocId" soabo="requiredDocumentId"/>
+    <attribute bo="ExchangeRate" soabo="exchangeRatefromOriginaltoLocal"/>
+    <attribute bo="OperatorOrganId" soabo="operatorOrganizationId"/>
+    <attribute bo="Organ" soabo="policyOrganizationId"/>
+    <attribute bo="OrganMoney" soabo="originalCurreny"/>
+    <attribute bo="PerfAgreementId" soabo="performanceAgreementId"/>
+    <attribute bo="PerfBranchCode" soabo="performanceBranchCode"/>
+    <attribute bo="PerfTeamCode" soabo="performanceTeamCode"/>
+    <attribute bo="Pi" soabo="premiumIncome"/>
+    <attribute bo="PiAdjustmentRate" soabo="premiumIncomeAdjustmentRate"/>
+    <attribute bo="PremCurAgp" soabo="agpofPremiumCurrency"/>
+    <attribute bo="PremCurAnp" soabo="anpofPremiumCurrency"/>
+    <attribute bo="PremCurApp" soabo="appofPremiumCurrency"/>
+    <attribute bo="PremCurCommission" soabo="commissionofPremiumCurrency"/>
+    <attribute bo="PremCurNcdAmount" soabo="ncdAmountofPremiumCurrency"/>
+    <attribute bo="PremCurServiceCharge" soabo="serviceChargeofPremiumCurrency"/>
+    <attribute bo="PremCurServiceFee" soabo="serviceFeeofPremiumCurrency"/>
+    <attribute bo="PremCurSgp" soabo="sgpofPremiumCurrency"/>
+    <attribute bo="PremCurSnp" soabo="snpofPremiumCurrency"/>
+    <attribute bo="PremCurStampDuty" soabo="stampDutyofPremiumCurrency"/>
+    <attribute bo="PremiumExRateToLC" soabo="exchangeRatefromPremiumCurrencytoLocal"/>
+    <attribute bo="PrintNumber" soabo="numberofPrintTimes"/>
+    <attribute bo="QuotationNo" soabo="quotationNumber"/>
+    <attribute bo="RealAgp" soabo="realActualGrossPremium"/>
+    <attribute bo="RealAnp" soabo="realActualNettPremium"/>
+    <attribute bo="RealApp" soabo="realActualPremiumPayable"/>
+    <attribute bo="RejectCode" soabo="rejectReasonCode"/>
+    <attribute bo="RejectDescription" soabo="rejectReasonDescription"/>
+    <attribute bo="RenewalFlag" soabo="renewalableorNot"/>
+    <attribute bo="RenewalOperationFlag" soabo="renewalNoticeSendorNot"/>
+    <attribute bo="Sgp" soabo="standardGrossPremium"/>
+    <attribute bo="SiCurAgp" soabo="agpofSumInsuredCurrency"/>
+    <attribute bo="SiCurAnp" soabo="anpofSumInsuredCurrency"/>
+    <attribute bo="SiCurApp" soabo="appofSumInsuredCurrency"/>
+    <attribute bo="SiCurNcdAmount" soabo="ncdAmountofSumInsuredCurrency"/>
+    <attribute bo="SiCurrency" soabo="sumInsuredCurrencyId"/>
+    <attribute bo="SiCurSgp" soabo="sgpofSumInsuredCurrency"/>
+    <attribute bo="SiCurSnp" soabo="snpofSumInsuredCurreny"/>
+    <attribute bo="SiCurSumInsured" soabo="sumInsuredofSumInsuredCurrency"/>
+    <attribute bo="SiExRateToLC" soabo="exchangeRatefromSICurrencytoLocal"/>
+    <attribute bo="SiPremiumExchangeRate" soabo="exchangeRatefromSICurrencytoPremiumCurrency"/>
+    <attribute bo="Snp" soabo="standardNettPremium"/>
+    <attribute bo="Status" soabo="proposalStatus"/>
+    <attribute bo="TerminalCode" soabo="terminalReasonCode"/>
+    <attribute bo="TermsId" soabo="termsConditionsId"/>
+    <attribute bo="prdtCanCoInsurance" soabo="productAllowCoinsuranceorNot"/>
+    <attribute bo="prdtCanRenewal" soabo="productCanbeReneworNot"/>
+  </mapping-handler>
+  <mapping-handler name="MarineVoyageSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.MarineVoyageBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.MarineVoyageSOABO">
+    <attribute bo="DestCityId" soabo="destinationCityId"/>
+    <attribute bo="DestCityName" soabo="destination"/>
+    <attribute bo="DestCountryCode" soabo="destinationCountryCode"/>
+    <attribute bo="DestCountryName" soabo="destinationCountryName"/>
+    <attribute bo="DestRegionCode" soabo="destinationRegionCode"/>
+    <attribute bo="DestRegionName" soabo="destinationRegionName"/>
+  </mapping-handler>
+  <mapping-handler name="PolicyPayInfoSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.PolicyPayInfoBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.PolicyPayInfoSOABO">
+    <attribute bo="BankAccount" soabo="bankAccountNumber"/>
+    <attribute bo="CertiCode" soabo="certficateCode"/>
+    <attribute bo="CertiType" soabo="certficateType"/>
+    <attribute bo="CreditExpDate" soabo="creditExpiryDate"/>
+    <attribute bo="EndoId" soabo="endorsementId"/>
+    <attribute bo="InstalFlag" soabo="installmentorNot"/>
+    <attribute bo="InstalInterval" soabo="installmentMethod"/>
+    <attribute bo="OffsetComm" soabo="offsetCommissionAmount"/>
+  </mapping-handler>
+  <mapping-handler name="LiabilityInsuredSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.LiabilityInsuredBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.LiabilityInsuredSOABO">
+    <attribute bo="BusiNatureCode" soabo="businessNatureCode"/>
+    <attribute bo="BusiNatureDesc" soabo="businessNatureDesc"/>
+  </mapping-handler>
+  <mapping-handler name="MpCtSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.MpCtBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.MpCtSOABO"/>
+  <mapping-handler name="GenPolicyInfoSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.GenPolicyInfoBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.GenPolicyInfoSOABO">
+    <attribute bo="ClassType" soabo="motorClassType"/>
+    <attribute bo="ContractType" soabo="marineContractType"/>
+    <attribute bo="DurationPrintFlag" soabo="poiPrintorNot"/>
+    <attribute bo="EatAdjRate" soabo="estimatedAnnualTurnoverCarryingAdjustmentRate"/>
+    <attribute bo="PaPolicyType" soabo="personalAccidentPolicyType"/>
+    <attribute bo="SecProductId" soabo="secondProductIdofFleetPolicy"/>
+    <attribute bo="StaffFlag" soabo="policyholderisStafforNot"/>
+    <attribute bo="TravelTransitNo" soabo="travleTransitNumber"/>
+  </mapping-handler>
+  <mapping-handler name="InsuredSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.InsuredBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.InsuredSOABO">
+    <attribute bo="Agp" soabo="actualGrossPremium"/>
+    <attribute bo="InsuredNo" soabo="numberofInsured"/>
+    <attribute bo="LiabilityStatus" soabo="insuredStatus"/>
+    <attribute bo="PlanShare" soabo="numberofPlan"/>
+    <attribute bo="PremCurAgp" soabo="agpofPremiumCurrency"/>
+    <attribute bo="PremCurAnp" soabo="anpofPremiumCurrency"/>
+    <attribute bo="PremCurNcdAmount" soabo="ncdAmountofPremiumCurrency"/>
+    <attribute bo="PremCurSgp" soabo="sgpofPremiumCurrency"/>
+    <attribute bo="PremCurSnp" soabo="snpofPremiumCurrency"/>
+    <attribute bo="RealAdjustedNetPremium" soabo="realAdjustedNettPremium"/>
+    <attribute bo="RealAgp" soabo="realActualGrossPremium"/>
+    <attribute bo="SiCurAgp" soabo="agpofSumInsuredCurrency"/>
+    <attribute bo="SiCurAnp" soabo="anpofSumInsuredCurrency"/>
+    <attribute bo="SiCurNcdAmount" soabo="ncdAmountofSumInsuredCurrency"/>
+    <attribute bo="SiCurSgp" soabo="sgpofSumInsuredCurrency"/>
+    <attribute bo="SiCurSnp" soabo="snpofSumInsuredCurreny"/>
+    <attribute bo="SiCurSumInsured" soabo="sumInsuredofSumInsuredCurrency"/>
+    <attribute bo="SubInsuredCateId" soabo="subInsuredCategoryId"/>
+  </mapping-handler>
+  <mapping-handler name="GenMarineTrshipSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.GenMarineTrshipBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.GenMarineTrshipSOABO"/>
+  <mapping-handler name="GenPolicyFeeSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.GenPolicyFeeBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.GenPolicyFeeSOABO"/>
+  <mapping-handler name="GenEmploymentSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.GenEmploymentBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.GenEmploymentSOABO">
+    <attribute bo="BusiNatureCode" soabo="businessNature"/>
+    <attribute bo="DelFlag" soabo="deletionFlag"/>
+    <attribute bo="EmptCode" soabo="employmentCode"/>
+    <attribute bo="EmptName" soabo="employmentName"/>
+    <attribute bo="SeqNum" soabo="sequenceNumber"/>
+  </mapping-handler>
+  <mapping-handler name="ContractInsuredSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.ContractInsuredBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.ContractInsuredSOABO">
+    <attribute bo="MaintenanceEffectDate" soabo="effectiveDateforMaintenancePeriod"/>
+    <attribute bo="MaintenanceExpiryDate" soabo="expiryDateforMaintenancePeriod"/>
+  </mapping-handler>
+  <mapping-handler name="GenMarineCMDTYSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.GenMarineCMDTYBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.GenMarineCMDTYSOABO"/>
+  <mapping-handler name="ReferralSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.ReferralBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.ReferralSOABO">
+    <attribute bo="RefDate" soabo="referralDate"/>
+    <attribute bo="RefEndoId" soabo="referralEndorsementId"/>
+    <attribute bo="RefId" soabo="referralId"/>
+    <attribute bo="RefNote" soabo="referralNote"/>
+    <attribute bo="RefToName" soabo="referralName"/>
+  </mapping-handler>
+  <mapping-handler name="MarineRateSOABOHandler" bo-class="com.ebao.gs.pol.core.pub.bo.bvo.MarineRateBVO" soabo-class="com.ebao.gs.pol.core.nb.bs.ws.soabo.MarineRateSOABO">
+    <attribute bo="PubCmdtyDesc" soabo="publicCommodityDescription"/>
+    <attribute bo="PubCmdtyId" soabo="publicCommodityId"/>
+    <attribute bo="PubCmdtyTypeDesc" soabo="publicCommodityTypeDescription"/>
+    <attribute bo="PubCmdtyTypeId" soabo="publicCommodityTypeId"/>
+  </mapping-handler>
+</mapping>

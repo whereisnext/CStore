@@ -1,0 +1,6 @@
+[INFO ] 15:27:59,501 com.coral.cstore.CStore: 17:-->test
+[INFO ] 15:28:20,939 com.coral.cstore.CStore: 17:-->test
+[DEBUG] 15:30:36,676 com.coral.fundation.Log4jTest: 22:-->str length:2
+[WARN ] 15:30:36,676 com.coral.fundation.Log4jTest: 25:-->字符串格式化错误！java.lang.NumberFormatException: For input string: "3d"
+[ERROR] 15:30:36,676 com.coral.fundation.Log4jTest: 26:-->字符串格式化错误！ error级别的！！！For input string: "3d"
+[INFO ] 15:30:36,676 com.coral.fundation.Log4jTest: 27:-->系统初始化！

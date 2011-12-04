@@ -1,0 +1,168 @@
+/**
+ * 
+ */
+package com.coral.cstore.view.biz;
+
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.custom.CTabFolder;
+import org.eclipse.swt.custom.CTabItem;
+import org.eclipse.swt.layout.GridData;
+import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.Button;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Text;
+
+import com.coral.cstore.CStore;
+import com.coral.cstore.IView;
+import com.coral.cstore.Style;
+import com.coral.cstore.utils.LayoutUtils;
+import com.coral.cstore.utils.TwoColumnViewLayout;
+import com.coral.cstore.utils.WidgetUtils;
+import com.coral.cstore.view.ViewList;
+
+/**
+ * @author Coral
+ *
+ */
+public class CreateCustomerTabView extends TwoColumnViewLayout implements IView {
+	CTabItem item;
+	public CTabItem asTabView(CTabFolder tabFolder) {
+		item = WidgetUtils.createClosableCTabItem(tabFolder, CStore.getResourceString("tab.customer.label"));
+		item.setData(ViewList.viewName, viewName());
+		item.setControl(getCompositePage(tabFolder,null));
+		return item;
+	}
+	
+	public Composite getCompositePage(Composite parent, String pageId) {
+//		int totalColumn =12,labelSize = 1,inputSize = 3,midEmpty = 1,endEmpty = 3;
+		GridLayout gridLayout = new GridLayout(totalColumn,true);
+		Style.gridLayoutUtils(gridLayout);
+		
+		Composite composite = new Composite(parent,SWT.NONE);
+		composite.setLayout(gridLayout);
+		composite.setBackground(Style.white);
+
+		GridData labelGD = LayoutUtils.createHBTFGridData(totalColumn);
+		Label label = WidgetUtils.createTitleLabel(composite, CStore.getResourceString("tab.customer.label"));
+		label.setLayoutData(labelGD);
+		
+		GridData descData = LayoutUtils.createHBTFGridData(totalColumn);
+		Label descLabel = WidgetUtils.createDescriptionLabel(composite, CStore.getResourceString("tab.customer.description"));
+		descLabel.setLayoutData(descData);
+
+		// customerName controller.
+		Label customerNameLabel = WidgetUtils.createLabel(composite, CStore.getResourceString("tab.customer.customerName"));
+		customerNameLabel.setLayoutData(lLabelGD);
+		Text customerNameInput = WidgetUtils.createText(composite);
+		customerNameInput.setLayoutData(lInputGD);
+		customerNameInput.setFocus();
+		createMidEmpty(composite);
+
+		// contectPerson controller.
+		Label contectPersonLabel = WidgetUtils.createLabel(composite, CStore.getResourceString("tab.customer.contectPerson"));
+		contectPersonLabel.setLayoutData(lLabelGD);
+		Text contectPersonInput = WidgetUtils.createText(composite);
+		contectPersonInput.setLayoutData(lInputGD);
+		createEndEmpty(composite);
+
+		// address controller.
+		Label addressLabel = WidgetUtils.createLabel(composite, CStore.getResourceString("tab.customer.address"));
+		addressLabel.setLayoutData(lLabelGD);
+		Text addressInput = WidgetUtils.createText(composite);
+		addressInput.setLayoutData(lCInputGD);
+		createEndEmpty(composite);
+		
+		// postcode controller.
+		Label postcodeLabel = WidgetUtils.createLabel(composite, CStore.getResourceString("tab.customer.postcode"));
+		postcodeLabel.setLayoutData(lLabelGD);
+		Text postcodeInput = WidgetUtils.createText(composite);
+		postcodeInput.setLayoutData(lInputGD);
+		createMidEmpty(composite);
+
+		// mobile controller.
+		Label mobileLabel = WidgetUtils.createLabel(composite, CStore.getResourceString("tab.customer.mobile"));
+		mobileLabel.setLayoutData(lLabelGD);
+		Text mobileInput = WidgetUtils.createText(composite);
+		mobileInput.setLayoutData(lInputGD);
+		createEndEmpty(composite);
+
+		// phone controller.
+		Label phoneLabel = WidgetUtils.createLabel(composite, CStore.getResourceString("tab.customer.phone"));
+		phoneLabel.setLayoutData(lLabelGD);
+		Text phoneInput = WidgetUtils.createText(composite);
+		phoneInput.setLayoutData(lInputGD);
+		createMidEmpty(composite);
+
+		// fax controller.
+		Label faxLabel = WidgetUtils.createLabel(composite, CStore.getResourceString("tab.customer.fax"));
+		faxLabel.setLayoutData(lLabelGD);
+		Text faxInput = WidgetUtils.createText(composite);
+		faxInput.setLayoutData(lInputGD);
+		createEndEmpty(composite);
+
+		// url controller.
+		Label urlLabel = WidgetUtils.createLabel(composite, CStore.getResourceString("tab.customer.url"));
+		urlLabel.setLayoutData(lLabelGD);
+		Text urlInput = WidgetUtils.createText(composite);
+		urlInput.setLayoutData(lInputGD);
+		createMidEmpty(composite);
+
+		// email controller.
+		Label emailLabel = WidgetUtils.createLabel(composite, CStore.getResourceString("tab.customer.email"));
+		emailLabel.setLayoutData(lLabelGD);
+		Text emailInput = WidgetUtils.createText(composite);
+		emailInput.setLayoutData(lInputGD);
+		createEndEmpty(composite);
+
+		// companyLicence controller.
+		Label companyLicenceLabel = WidgetUtils.createLabel(composite, CStore.getResourceString("tab.customer.companyLicence"));
+		companyLicenceLabel.setLayoutData(lLabelGD);
+		Text companyLicenceInput = WidgetUtils.createText(composite);
+		companyLicenceInput.setLayoutData(lInputGD);
+		createMidEmpty(composite);
+
+		// accountBank controller.
+		Label accountBankLabel = WidgetUtils.createLabel(composite, CStore.getResourceString("tab.customer.accountBank"));
+		accountBankLabel.setLayoutData(lLabelGD);
+		Text accountBankInput = WidgetUtils.createText(composite);
+		accountBankInput.setLayoutData(lInputGD);
+		createEndEmpty(composite);
+
+		// accountNumber controller.
+		Label accountNumberLabel = WidgetUtils.createLabel(composite, CStore.getResourceString("tab.customer.accountNumber"));
+		accountNumberLabel.setLayoutData(lLabelGD);
+		Text accountNumberInput = WidgetUtils.createText(composite);
+		accountNumberInput.setLayoutData(lInputGD);
+		createMidEmpty(composite);
+
+		// accountPerson controller.
+		Label accountPersonLabel = WidgetUtils.createLabel(composite, CStore.getResourceString("tab.customer.accountPerson"));
+		accountPersonLabel.setLayoutData(lLabelGD);
+		Text accountPersonInput = WidgetUtils.createText(composite);
+		accountPersonInput.setLayoutData(lInputGD);
+		createEndEmpty(composite);
+
+		// mark controller.
+		Label markLabel = WidgetUtils.createLabel(composite, CStore.getResourceString("tab.customer.mark"));
+		markLabel.setLayoutData(lLabelGD);
+		Text markInput = WidgetUtils.createText(composite);
+		markInput.setLayoutData(lCInputGD);
+		createEndEmpty(composite);
+		
+		Button button = new Button(composite, SWT.PUSH);
+		button.setText(CStore.getResourceString("tab.customer.createCustomer"));
+		button.setLayoutData(btn);		
+
+		// set force to user name text
+		return composite;
+	}
+
+	public void refresh() {
+	}
+
+	public String viewName() {
+		return ViewList.createCustomer;
+	}
+
+}

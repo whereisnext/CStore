@@ -1,0 +1,131 @@
+/**
+ * 
+ */
+package com.coral.cstore.view.admin;
+
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.custom.CTabFolder;
+import org.eclipse.swt.custom.CTabItem;
+import org.eclipse.swt.layout.GridData;
+import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.Button;
+import org.eclipse.swt.widgets.Combo;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Text;
+
+import com.coral.cstore.CStore;
+import com.coral.cstore.IView;
+import com.coral.cstore.Style;
+import com.coral.cstore.utils.CodeTableUtils;
+import com.coral.cstore.utils.LayoutUtils;
+import com.coral.cstore.utils.StrUtils;
+import com.coral.cstore.utils.WidgetUtils;
+import com.coral.cstore.view.ViewList;
+
+/**
+ * @author Coral
+ *
+ */
+public class CreateUserTabView implements IView {
+	Text userNameText;
+	CTabItem item;
+	public CTabItem asTabView(CTabFolder tabFolder) {
+		item = new CTabItem(tabFolder, SWT.DEFAULT);
+		item.setData(ViewList.viewName, ViewList.createUser);
+		item.setShowClose(true);
+		item.setText(StrUtils.tabTitle(CStore.getResourceString("tab.createUser")));
+//		createOperateTable(tabFolder);
+		item.setControl(getCompositePage(tabFolder,null));
+		return item;
+	}
+	
+	public Composite getCompositePage(Composite parent, String pageId) {
+		GridLayout gridLayout = new GridLayout(8,true);
+		Style.gridLayoutUtils(gridLayout);
+		
+		Composite composite = new Composite(parent,SWT.NONE);
+		composite.setLayout(gridLayout);
+		composite.setBackground(Style.white);
+
+		GridData labelGD = new GridData(GridData.FILL, GridData.BEGINNING, true, false);
+		labelGD.horizontalSpan=8;
+		Label label = new Label(composite, SWT.SHADOW_OUT);
+		Style.tabTitleLabel(label);
+		label.setText(CStore.getResourceString("tab.createUser.label"));
+		label.setLayoutData(labelGD);
+		
+		GridData descData = new GridData(GridData.BEGINNING, GridData.BEGINNING, true, false);
+		descData.horizontalSpan=8;
+		Label descLabel = new Label(composite, SWT.WRAP | SWT.SHADOW_OUT);
+		Style.tabDescriptionLabel(descLabel);
+		descLabel.setLayoutData(descData);
+		descLabel.setText(CStore.getResourceString("tab.createUser.description"));
+		
+		GridData lb = LayoutUtils.createFillGridData(1);
+		GridData tb = LayoutUtils.createFillGridData(2);
+		GridData hb = LayoutUtils.createFillGridData(5);
+		GridData btn = LayoutUtils.createCenterGridData(3);
+
+		// user name combine with label, text and empty label.
+		Label userNameLabel = WidgetUtils.createRequiredLabel(composite, CStore.getResourceString("tab.createUser.userName"));
+		userNameLabel.setLayoutData(lb);
+		userNameText = WidgetUtils.createText(composite);
+		userNameText.setLayoutData(tb);
+		Label userNameTip = WidgetUtils.createEmptyLabel(composite);
+		userNameTip.setLayoutData(hb);
+		
+		// password
+		Label passwordLabel = WidgetUtils.createRequiredLabel(composite, CStore.getResourceString("tab.createUser.password"));
+		passwordLabel.setLayoutData(lb);
+		Text passwordText = WidgetUtils.createPassword(composite);
+		passwordText.setLayoutData(tb);
+		Label passwordTip = WidgetUtils.createEmptyLabel(composite);
+		passwordTip.setLayoutData(hb);
+		
+		// repassword
+		Label rePasswordLabel = WidgetUtils.createRequiredLabel(composite, CStore.getResourceString("tab.createUser.rePassword"));
+		rePasswordLabel.setLayoutData(lb);
+		Text rePasswordText = WidgetUtils.createPassword(composite);
+		rePasswordText.setLayoutData(tb);
+		Label rePasswordTip = WidgetUtils.createEmptyLabel(composite);
+		rePasswordTip.setLayoutData(hb);
+		
+		//role combo
+		Label roleLabel = WidgetUtils.createRequiredLabel(composite, CStore.getResourceString("tab.createUser.role"));
+		roleLabel.setLayoutData(lb);
+		Combo role = WidgetUtils.createCombo(composite, CodeTableUtils.roles);
+		role.setLayoutData(tb);
+		Label roleTip = WidgetUtils.createEmptyLabel(composite);
+		roleTip.setLayoutData(hb);
+		
+		Button button = new Button(composite, SWT.PUSH);
+		button.setText(CStore.getResourceString("tab.createUser"));
+		button.setLayoutData(btn);		
+		
+		userNameText.setFocus();
+		return composite;
+	}
+	
+	public String viewName() {
+		return ViewList.createUser;
+	}
+	
+	public void refresh() {
+		userNameText.setFocus();
+	}
+
+	/**
+	 * @return the item
+	 */
+	public CTabItem getItem() {
+		return item;
+	}
+
+	/**
+	 * @param item the item to set
+	 */
+	public void setItem(CTabItem item) {
+		this.item = item;
+	}
+}

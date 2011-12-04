@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+    <!-- Generated spring bean tag go here -->
+	<bean id="customerDao" class="com.coral.store.basic.dao.impl.CustomerDaoImpl"/>
+	<bean id="supplierDao" class="com.coral.store.basic.dao.impl.SupplierDaoImpl"/>
+	<bean id="productDao" class="com.coral.store.basic.dao.impl.ProductDaoImpl"/>
+	<bean id="purchaseOrderSheetDao" class="com.coral.store.basic.dao.impl.PurchaseOrderSheetDaoImpl"/>
+	<bean id="purchaseOrderProductDao" class="com.coral.store.basic.dao.impl.PurchaseOrderProductDaoImpl"/>
+	<bean id="stockDao" class="com.coral.store.basic.dao.impl.StockDaoImpl"/>
+	<bean id="importStockDao" class="com.coral.store.basic.dao.impl.ImportStockDaoImpl"/>
+	<bean id="exportStockDao" class="com.coral.store.basic.dao.impl.ExportStockDaoImpl"/>
+	<bean id="saleOrderSheetDao" class="com.coral.store.basic.dao.impl.SaleOrderSheetDaoImpl"/>
+	<bean id="saleOrderProductDao" class="com.coral.store.basic.dao.impl.SaleOrderProductDaoImpl"/>
+	
+	<!-- 	Extend spring bean tag go here -->
+	<bean id="extProductDao" class="com.coral.store.ext.dao.impl.ExtProductDaoImpl"/>
+	<bean id="extSupplierDao" class="com.coral.store.ext.dao.impl.ExtSupplierDaoImpl"/>
+	<bean id="extCustomerDao" class="com.coral.store.ext.dao.impl.ExtCustomerDaoImpl"/>
+
+  	<!-- more bean definitions go here -->
+
+</beans>

@@ -1,0 +1,147 @@
+
+/*******************************************************************************
+ * Copyright (c) 2000, 2005 IBM Corporation and others.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * Contributors:
+ *     IBM Corporation - initial API and implementation
+ *******************************************************************************/
+package com.coral.cstore.cache;
+ 
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Enumeration;
+import java.util.HashMap;
+import java.util.Hashtable;
+import java.util.Map;
+import java.util.Set;
+ 
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.graphics.Cursor;
+import org.eclipse.swt.graphics.Image;
+import org.eclipse.swt.graphics.ImageData;
+import org.eclipse.swt.widgets.Display;
+ 
+import com.coral.cstore.utils.StrUtils;
+ 
+/**
+ * Manages icons for the application. This is necessary as we could easily end
+ * up creating thousands of icons bearing the same image.
+ */
+public class IconCache {
+ 
+	/**
+	 * http://findicons.com/pack/2358/boolean/2
+	 */
+	public Map<String, String> imageLocations = new HashMap<String, String>() {
+		{
+			put("shellIcon", "/icons/app_icon.ico");
+			put("loginBiz", "/images/login_biz.png");
+			put("closeWinBtn", "/images/close_win_btn.png");
+			put("loginBtn", "/images/login_btn.png");
+			put("menu", "/images/menu.png");
+			put("menu_logout", "/icons/menu/logout.ico");
+			put("CreateCustomer", "/icons/menu/customers.ico");
+			put("ManageCustomer", "/icons/menu/communication.ico");
+			put("CreateSupplier", "/icons/menu/product.ico");
+			put("ManageSupplier", "/icons/menu/product_193.ico");
+			put("CreateOrderSheet", "/icons/menu/order.ico");
+			put("CreateUser", "/icons/menu/user.ico");
+			put("ChangePassword", "/icons/menu/my_account.ico");
+			put("Help", "/icons/menu/manual.ico");
+			put("Search","/icons/menu/search.ico");
+			put("bg_fade","/images/bg_fade.jpg");
+		}
+	};
+ 
+	
+	public Map<String, Image> stockImages;
+ 
+	// Stock cursors
+	public final int cursorDefault = 0, cursorWait = 1;
+	public Cursor stockCursors[];
+ 
+	public IconCache() {
+	}
+ 
+	/**
+	 * Loads the resources
+	 * 
+	 * @param display
+	 *            the display
+	 */
+	public void initResources(Display display) {
+		if (stockImages == null) {
+			stockImages = new HashMap<String, Image>();
+ 
+			Set<String> imageKeys = imageLocations.keySet();
+			for (String imageKey : imageKeys) {
+				Image image = createStockImage(display, imageLocations.get(imageKey));
+				if (image == null) {
+					freeResources();
+					throw new IllegalStateException(
+							StrUtils.getResourceString("error.CouldNotLoadResources"));
+				}
+				stockImages.put(imageKey, image);
+			}
+		}
+		if (stockCursors == null) {
+			stockCursors = new Cursor[] { null,
+					new Cursor(display, SWT.CURSOR_WAIT) };
+		}
+	}
+ 
+	/**
+	 * Frees the resources
+	 */
+	public void freeResources() {
+		if (stockImages != null) {
+			for (Image image : stockImages.values()) {
+				if (image != null)
+					image.dispose();
+			}
+			stockImages = null;
+		}
+		if (stockCursors != null) {
+			for (int i = 0; i < stockCursors.length; ++i) {
+				final Cursor cursor = stockCursors[i];
+				if (cursor != null)
+					cursor.dispose();
+			}
+			stockCursors = null;
+		}
+	}
+ 
+	/**
+	 * Creates a stock image
+	 * 
+	 * @param display
+	 *            the display
+	 * @param path
+	 *            the relative path to the icon
+	 */
+	private Image createStockImage(Display display, String path) {
+		InputStream stream = IconCache.class.getResourceAsStream(path);
+		ImageData imageData = new ImageData(stream);
+		ImageData mask = imageData.getTransparencyMask();
+		Image result = new Image(display, imageData, mask);
+		try {
+			stream.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return result;
+	}
+	
+	/**
+	 * Return image icon.
+	 * @param key
+	 * @return Image
+	 */
+	public Image getIcon(String key) {
+		return stockImages.get(key);
+	}
+}

@@ -1,0 +1,119 @@
+/**
+ * 
+ */
+package com.coral.cstore.view.biz.dialog;
+
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Shell;
+import org.eclipse.swt.widgets.Text;
+
+import com.coral.cstore.CStore;
+import com.coral.cstore.Style;
+import com.coral.cstore.utils.TwoColumnViewLayout;
+import com.coral.cstore.utils.WidgetUtils;
+
+/**
+ * @author Coral
+ *
+ */
+public class CreateProductDialog extends TwoColumnViewLayout {
+
+	Shell shell;
+	String[] values;
+	String[] labels;
+	
+	public CreateProductDialog(Shell parent) {
+		shell = new Shell(parent, SWT.DIALOG_TRIM | SWT.PRIMARY_MODAL);
+		shell.setLayout(new GridLayout());		
+	}
+	
+	public void initWidget() {
+		GridLayout gridLayout = new GridLayout(totalColumn,true);
+		Style.gridLayoutUtils(gridLayout);
+		
+		Composite composite = new Composite(shell,SWT.NONE);
+		composite.setLayout(gridLayout);
+		composite.setBackground(Style.white);
+
+		// productCode controller.
+		Label productCodeLabel = WidgetUtils.createLabel(composite, CStore.getResourceString("tab.product.productCode"));
+		productCodeLabel.setLayoutData(lLabelGD);
+		Text productCodeInput = WidgetUtils.createText(composite);
+		productCodeInput.setLayoutData(lInputGD);
+		createMidEmpty(composite);
+
+		// productName controller.
+		Label productNameLabel = WidgetUtils.createLabel(composite, CStore.getResourceString("tab.product.productName"));
+		productNameLabel.setLayoutData(lLabelGD);
+		Text productNameInput = WidgetUtils.createText(composite);
+		productNameInput.setLayoutData(lInputGD);
+		createEndEmpty(composite);
+
+		// brand controller.
+		Label brandLabel = WidgetUtils.createLabel(composite, CStore.getResourceString("tab.product.brand"));
+		brandLabel.setLayoutData(lLabelGD);
+		Text brandInput = WidgetUtils.createText(composite);
+		brandInput.setLayoutData(lInputGD);
+		createMidEmpty(composite);
+
+		// unit controller.
+		Label unitLabel = WidgetUtils.createLabel(composite, CStore.getResourceString("tab.product.unit"));
+		unitLabel.setLayoutData(lLabelGD);
+		Text unitInput = WidgetUtils.createText(composite);
+		unitInput.setLayoutData(lInputGD);
+		createEndEmpty(composite);
+
+		// spec controller.
+		Label specLabel = WidgetUtils.createLabel(composite, CStore.getResourceString("tab.product.spec"));
+		specLabel.setLayoutData(lLabelGD);
+		Text specInput = WidgetUtils.createText(composite);
+		specInput.setLayoutData(lInputGD);
+		createMidEmpty(composite);
+
+		// color controller.
+		Label colorLabel = WidgetUtils.createLabel(composite, CStore.getResourceString("tab.product.color"));
+		colorLabel.setLayoutData(lLabelGD);
+		Text colorInput = WidgetUtils.createText(composite);
+		colorInput.setLayoutData(lInputGD);
+		createEndEmpty(composite);
+
+		// buyPrice controller.
+		Label buyPriceLabel = WidgetUtils.createLabel(composite, CStore.getResourceString("tab.product.buyPrice"));
+		buyPriceLabel.setLayoutData(lLabelGD);
+		Text buyPriceInput = WidgetUtils.createText(composite);
+		buyPriceInput.setLayoutData(lInputGD);
+		createMidEmpty(composite);
+
+		// mark controller.
+		Label markLabel = WidgetUtils.createLabel(composite, CStore.getResourceString("tab.product.mark"));
+		markLabel.setLayoutData(lLabelGD);
+		Text markInput = WidgetUtils.createText(composite);
+		markInput.setLayoutData(lInputGD);
+		createEndEmpty(composite);
+
+
+
+	}
+	
+	public String[] getValues() {
+		return values;
+	}
+	
+	public String[] open() {
+		initWidget();
+		shell.pack();
+		shell.open();
+		Display display = shell.getDisplay();
+		while(!shell.isDisposed()){
+			if(!display.readAndDispatch())
+				display.sleep();
+		}
+		
+		return getValues();
+	}
+
+}

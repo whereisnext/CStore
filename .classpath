@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="view"/>
+	<classpathentry kind="src" path="store"/>
+	<classpathentry kind="src" path="store-test"/>
+	<classpathentry kind="src" path="build/service/store"/>
+	<classpathentry kind="src" path="build/dao/store"/>
+	<classpathentry kind="src" path="build/entity/store"/>
+	<classpathentry kind="src" path="fundation"/>
+	<classpathentry kind="src" path="fundation-test"/>
+	<classpathentry kind="src" path="build/entity/fundation"/>
+	<classpathentry kind="src" path="build/service/fundation"/>
+	<classpathentry kind="src" path="build/dao/fundation"/>
+	<classpathentry kind="src" path="tool"/>
+	<classpathentry kind="src" path="resources"/>
+	<classpathentry kind="src" path="example"/>
+	<classpathentry kind="src" path="finance"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/3"/>
+	<classpathentry kind="lib" path="/home/vance/lab/cstore/lib/org.springframework.expression-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/vance/lab/cstore/lib/org.springframework.asm-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/vance/lab/cstore/lib/org.springframework.context-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/vance/lab/cstore/lib/org.springframework.core-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/vance/lab/cstore/lib/org.springframework.beans-3.0.5.RELEASE.jar"/>
+	<classpathentry kind="lib" path="/home/vance/lab/cstore/lib/org.swtchart_0.7.0.v20110128.jar"/>
+	<classpathentry kind="lib" path="/home/vance/lab/cstore/lib/org.swtchart.ext_0.7.0.v20110128.jar"/>
+	<classpathentry kind="lib" path="/home/vance/lab/cstore/lib/poi-3.2-FINAL.jar"/>
+	<classpathentry kind="lib" path="/home/vance/lab/cstore/lib/log4j-1.2.16.jar"/>
+	<classpathentry kind="lib" path="/home/vance/lab/cstore/lib/commons-logging.jar"/>
+	<classpathentry kind="lib" path="/home/vance/lab/cstore/lib/jaxen.jar"/>
+	<classpathentry kind="lib" path="/home/vance/lab/cstore/lib/commons-lang.jar"/>
+	<classpathentry kind="lib" path="/home/vance/lab/cstore/lib/pinyin4j-2.5.0.jar"/>
+	<classpathentry kind="lib" path="/home/vance/lab/cstore/lib/mysql-connector-java-5.1.13.jar"/>
+	<classpathentry kind="lib" path="/home/vance/lab/cstore/lib/sqlitejdbc-v056.jar"/>
+	<classpathentry kind="lib" path="/home/vance/lab/cstore/lib/dom4j.jar"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/SWT"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

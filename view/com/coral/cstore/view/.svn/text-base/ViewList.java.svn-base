@@ -1,0 +1,22 @@
+/**
+ * 
+ */
+package com.coral.cstore.view;
+
+/**
+ * @author Coral
+ *
+ */
+public class ViewList {
+	// check view
+	public static String viewName = "viewName";
+	
+	// view name
+	public static String createUser="CreateUser";
+	public static String changePassword = "ChangePassword";
+	
+	// biz name
+	public static String createCustomer="CreateCustomer";
+	public static String createSupplier="CreateSupplier";
+	public static String manageCustomer="ManageCustomer";
+}

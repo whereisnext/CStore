@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="userDao" class="com.coral.fundation.basic.dao.impl.UserDaoImpl"/>
+	<bean id="roleDao" class="com.coral.fundation.basic.dao.impl.RoleDaoImpl"/>
+	<bean id="modelMenuDao" class="com.coral.fundation.basic.dao.impl.ModelMenuDaoImpl"/>
+	<bean id="roleMenuDao" class="com.coral.fundation.basic.dao.impl.RoleMenuDaoImpl"/>
+	<bean id="shotCutDao" class="com.coral.fundation.basic.dao.impl.ShotCutDaoImpl"/>
+	<bean id="roleShotCutDao" class="com.coral.fundation.basic.dao.impl.RoleShotCutDaoImpl"/>
+	<bean id="workflowProcessDao" class="com.coral.fundation.basic.dao.impl.WorkflowProcessDaoImpl"/>
+	<bean id="basicInfoDao" class="com.coral.fundation.basic.dao.impl.BasicInfoDaoImpl"/>
+
+	<!-- 	Ext dao -->
+	<bean id="extUserDao" class="com.coral.fundation.ext.dao.impl.ExtUserDaoImpl"/>
+	<bean id="extRoleModelMenuDao" class="com.coral.fundation.ext.dao.impl.ExtRoleModelMenuDaoImpl"/>
+	<bean id="extRoleShotCutDao" class="com.coral.fundation.ext.dao.impl.ExtRoleShotCutDaoImpl"/>
+</beans>

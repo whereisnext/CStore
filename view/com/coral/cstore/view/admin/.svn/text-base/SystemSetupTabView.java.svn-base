@@ -1,0 +1,32 @@
+/**
+ * 
+ */
+package com.coral.cstore.view.admin;
+
+import org.eclipse.swt.custom.CTabFolder;
+import org.eclipse.swt.custom.CTabItem;
+
+import com.coral.cstore.IView;
+
+/**
+ * @author Coral
+ *
+ */
+public class SystemSetupTabView implements IView {
+
+	public CTabItem asTabView(CTabFolder tabFolder) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void refresh() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public String viewName() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

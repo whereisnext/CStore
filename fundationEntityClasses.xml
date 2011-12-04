@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coral name="fundation" entityPackage="com.coral.fundation.model" daoIntfPackage="com.coral.fundation.basic.dao" daoImplPackage="com.coral.fundation.basic.dao.impl" servicePackage="com.coral.fundation.service">
+	<entity entityName="User">
+		<property propertyName="userId" type="String" length="36" isTableColumn="true" isViewColumn="false" pk="true"/>
+		<property propertyName="userName" type="String"  isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="password" type="String" isTableColumn="true" isViewColumn="false" />
+		<property propertyName="roleName" type="String" isTableColumn="true" isViewColumn="false" />
+		<property propertyName="roleId" type="String" isTableColumn="true" isViewColumn="false" />
+		<property propertyName="role" type="Role" isTableColumn="false" isViewColumn="false" ref="Role" />
+		<property propertyName="insertDate" type="Date" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="abstractUser" type="String" isTableColumn="true" isViewColumn="false" />
+	</entity>
+	<entity entityName="Role">
+		<property propertyName="roleId" type="String" length="36" isTableColumn="true" isViewColumn="false" pk="true"/>
+		<property propertyName="roleName" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="roleDescription" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="abstractRole" type="String" isTableColumn="true" isViewColumn="false"/>
+	</entity>
+	<entity entityName="ModelMenu">
+		<!-- sequence for entity -->
+		<property propertyName="modelMenuId" type="String" isTableColumn="true" isViewColumn="false" pk="true"/>
+		<property propertyName="menuId" type="Long" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="menuName" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="parentMenuId" type="Long" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="viewName" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="icon" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="orderIndex" type="Long" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="subMenus" type="List" isTableColumn="false" isViewColumn="false" ref="ModelMenu"/>
+		<property propertyName="abstractModelMenu" type="String" isTableColumn="true" isViewColumn="false"/>
+	</entity>
+	<entity entityName="RoleMenu">
+		<property propertyName="roleMenuId" type="String" length="36" isTableColumn="true" isViewColumn="false" pk="true"/>
+		<property propertyName="roleId" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="menuId" type="Long" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="abstractRoleMenu" type="String" isTableColumn="true" isViewColumn="false"/>
+	</entity>
+	<entity entityName="ShotCut">
+		<property propertyName="shotCutId" type="String" length="36" isTableColumn="true" isViewColumn="false" pk="true"/>
+		<property propertyName="menuId" type="Long" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="icon" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="shotCutName" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="viewName" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="abstractShotCut" type="String" isTableColumn="true" isViewColumn="false"/>
+	</entity>
+	<entity entityName="RoleShotCut">
+		<property propertyName="roleShotCutId" type="String" length="36" isTableColumn="true" isViewColumn="false" pk="true"/>
+		<property propertyName="roleId" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="shotCutId" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="orderIndex" type="Long" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="abstractRoleShotCut" type="String" isTableColumn="true" isViewColumn="false"/>
+	</entity>
+	<entity entityName="WorkflowProcess">
+		<property propertyName="workflowProcessId" type="String" length="36" isTableColumn="true" isViewColumn="false" pk="true"/>
+		<property propertyName="nextProcessId" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="failProcessId" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="status" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="statusLabel" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="failStatusLabel" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="roleId" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="abstractWorkflowProcess" type="String" isTableColumn="true" isViewColumn="false"/>
+	</entity>
+	<!-- 基本信息设置，公司信息，系统基本信息 ，系统使用规则-->
+	<entity entityName="BasicInfo">
+		<property propertyName="basicInfoId" type="String" length="36" isTableColumn="true" isViewColumn="false" pk="true"/>
+		<property propertyName="companyName" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="phone" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="fax" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="district" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="deliverAddress" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="deliverPostcode" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="url" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="email" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="accountBank" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="accountNumber" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="accountPerson" type="String" isTableColumn="true" isViewColumn="false"/>
+	</entity>
+</coral>

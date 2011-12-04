@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+package com.coral.cstore.utils;
+
+/**
+ * @author coral.ma
+ *
+ */
+public class CodeTableUtils {
+
+	public static String[] roles = new String[] { "入单员", "项目经理", "技术审核",
+		"物流", "财务" };
+}

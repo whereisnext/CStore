@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coral name="store" entityPackage="com.coral.store.model" daoIntfPackage="com.coral.store.basic.dao" daoImplPackage="com.coral.store.basic.dao.impl" servicePackage="com.coral.store.basic.service">
+	<!-- 客户主表  *修改时需修改View -->
+	<entity entityName="Customer" needView="true">
+		<property propertyName="customerId" type="String" length="36" isTableColumn="true" isViewColumn="false" pk="true"/>
+		<property propertyName="customerName" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="contectPerson" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="district" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="postcode" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="address" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="mobile" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="phone" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="fax" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="url" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="email" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="accountBank" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="accountNumber" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="accountPerson" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="mark" type="String" isTableColumn="true" isViewColumn="false"/>
+		<!-- 客户状态, 标记黑名单客户等。 -->
+		<property propertyName="status" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="customerPinYin" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="abstractCustomer" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="insertDate" type="Date" isTableColumn="true" isViewColumn="false"/>
+	</entity>
+	<!-- 	供应商主表 *修改时需修改View -->
+	<entity entityName="Supplier" needView="true">
+		<property propertyName="supplierId" type="String" length="36" isTableColumn="true" isViewColumn="false" pk="true"/>
+		<property propertyName="supplierName" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="contectPerson" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="district" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="postcode" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="address" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="mobile" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="phone" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="fax" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="url" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="email" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="accountBank" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="accountNumber" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="accountPerson" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="mark" type="String" isTableColumn="true" isViewColumn="false"/>
+		<!-- 供应商状态 -->
+		<property propertyName="status" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="supplierPinYin" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="abstractSupplier" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="insertDate" type="Date" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="products" type="List" isTableColumn="false" isViewColumn="false" ref="Product"/>
+	</entity>
+	<!-- 	产品主表 -->
+	<entity entityName="Product">
+		<property propertyName="productId" type="String" length="36" isTableColumn="true" isViewColumn="false" pk="true"/>
+		<property propertyName="productCode" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="productName" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="brand" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="unit" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="spec" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="color" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="buyPrice" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="salePrice" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="mark" type="String" isTableColumn="true" isViewColumn="false"/>
+		<!-- 产品状态 -->
+		<property propertyName="status" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="supplierId" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="supplierName" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="productPinYin" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="abstractProduct" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="insertDate" type="Date" isTableColumn="true" isViewColumn="false"/>
+	</entity>
+		<!-- 	销售订单 -->
+	<entity entityName="SaleOrderSheet">
+		<property propertyName="saleOrderSheetId" type="String" length="36" isTableColumn="true" isViewColumn="false" pk="true"/>
+		<property propertyName="saleOrderNo" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="customerName" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="receivePerson" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="mobile" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="fax" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="district" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="deliverAddress" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="deliverPostcode" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="deliverDate" type="Date" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="mark" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="totalPrice" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="status" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="products" type="List" isTableColumn="false" isViewColumn="false" ref="SaleOrderProduct"/>
+		<property propertyName="salesmanId" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="creatorId" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="orderPinYin" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="abstractOrder" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="insertDate" type="Date" isTableColumn="true" isViewColumn="false"/>
+	</entity>
+	<!-- 	销售订单产品 -->
+	<entity entityName="SaleOrderProduct">
+		<property propertyName="saleOrderProductId" type="String" length="36" isTableColumn="true" isViewColumn="false" pk="true"/>
+		<property propertyName="saleOrderSheetId" type="String" length="36" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="productName" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="number" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="spec" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="color" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="salePrice" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="mark" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="insertDate" type="Date" isTableColumn="true" isViewColumn="false"/>
+	</entity>
+	<!-- 	采购订单 -->
+	<entity entityName="PurchaseOrderSheet">
+		<property propertyName="purchaseOrderSheetId" type="String" length="36" isTableColumn="true" isViewColumn="false" pk="true"/>
+		<property propertyName="purchaseOrderNo" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="saleOrderNo" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="supplierName" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="receivePerson" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="mobile" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="deliverAddress" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="deliverPostcode" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="deliverDate" type="Date" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="mark" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="totalPrice" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="status" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="products" type="List" isTableColumn="false" isViewColumn="false" ref="PurchaseOrderProduct"/>
+		<property propertyName="salesmanId" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="creatorId" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="orderPinYin" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="abstractOrder" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="insertDate" type="Date" isTableColumn="true" isViewColumn="false"/>
+	</entity>
+	<!-- 	采购订单产品 -->
+	<entity entityName="PurchaseOrderProduct">
+		<property propertyName="purchaseOrderProductId" type="String" length="36" isTableColumn="true" isViewColumn="false" pk="true"/>
+		<property propertyName="purchaseOrderSheetId" type="String" length="36" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="supplierName" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="productName" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="spec" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="color" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="number" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="totalSalePrice" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="mark" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="insertDate" type="Date" isTableColumn="true" isViewColumn="false"/>
+	</entity>
+
+	<!-- 	库存主表 		-->
+	<entity entityName="Stock">
+		<property propertyName="stockId" type="String" length="36" isTableColumn="true" isViewColumn="false" pk="true"/>
+		<property propertyName="supplierName" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="productName" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="number" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="spec" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="color" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="averagePrice" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="mark" type="String" isTableColumn="true" isViewColumn="false"/>
+		<!-- 仓库管理关联 -->
+		<property propertyName="warehouseLocation" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="weight" type="Long" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="insertDate" type="Date" isTableColumn="true" isViewColumn="false"/>
+	</entity>
+
+	<!-- 	入库记录 -->
+	<entity entityName="ImportStock">
+		<property propertyName="importStockId" type="String" length="36" isTableColumn="true" isViewColumn="false" pk="true"/>
+		<property propertyName="supplierName" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="productName" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="number" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="spec" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="color" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="salePrice" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="mark" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="insertDate" type="Date" isTableColumn="true" isViewColumn="false"/>
+	</entity>
+	
+	<!-- 	出库记录 -->
+	<entity entityName="ExportStock">
+		<property propertyName="exportStockId" type="String" length="36" isTableColumn="true" isViewColumn="false" pk="true"/>
+		<property propertyName="supplierName" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="productName" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="number" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="spec" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="color" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="salePrice" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="mark" type="String" isTableColumn="true" isViewColumn="false"/>
+		<property propertyName="insertDate" type="Date" isTableColumn="true" isViewColumn="false"/>
+	</entity>
+</coral>

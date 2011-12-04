@@ -1,0 +1,91 @@
+/**
+ * 
+ */
+package com.coral.cstore.utils;
+
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.custom.CTabFolder;
+import org.eclipse.swt.custom.CTabItem;
+import org.eclipse.swt.widgets.Button;
+import org.eclipse.swt.widgets.Combo;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Text;
+
+import com.coral.cstore.Style;
+
+/**
+ * @author Coral
+ *
+ */
+public class WidgetUtils {
+
+	/** Label. */
+	public static Label createLabel(Composite composite,String text) {
+		Label label = new Label(composite, SWT.NONE);
+		label.setBackground(Style.white);
+		label.setText(text + ":");
+		return label;
+	}
+	
+	public static Label createRequiredLabel(Composite composite,String text) {
+		Label label = new Label(composite, SWT.NONE);
+		label.setBackground(Style.white);
+		label.setText(text + "*:");
+		return label;
+	}
+	
+	public static Label createEmptyLabel(Composite composite) {
+		Label label = new Label(composite, SWT.NONE);
+		label.setBackground(Style.white);
+		return label;
+	}
+	
+	public static Label createTitleLabel(Composite composite,String text) {
+		Label label = new Label(composite, SWT.NONE);
+		label.setBackground(Style.white);
+		label.setFont(Style.tabTitleFont);
+		label.setText(text);
+		return label;
+	}
+	
+	public static Label createDescriptionLabel(Composite composite,String text) {
+		Label label = new Label(composite, SWT.WRAP | SWT.SHADOW_OUT);
+		label.setBackground(Style.white);
+		label.setForeground(Style.gray);
+		label.setText(text);
+		return label;
+	}
+
+	/** Text. */
+	public static Text createText(Composite composite) {
+		Text text = new Text(composite, SWT.SINGLE | SWT.BORDER);
+		return text;
+	}
+	
+	public static Text createPassword(Composite composite) {
+		Text text = new Text(composite, SWT.PASSWORD | SWT.SINGLE | SWT.BORDER);
+		return text;
+	}
+	
+	/** Combo */
+	public static Combo createCombo(Composite composite, String[] datas) {
+		Combo combo = new Combo(composite, SWT.READ_ONLY | SWT.DROP_DOWN | SWT.SIMPLE);
+		combo.setItems(datas);
+		return combo;
+	}
+	
+	/** Closable CTabItem */
+	public static CTabItem createClosableCTabItem(CTabFolder tabFolder, String titleText) {
+		CTabItem item = new CTabItem(tabFolder, SWT.DEFAULT);
+		item.setShowClose(true);
+		item.setText(StrUtils.tabTitle(titleText));
+		return item;
+	}
+	
+	public static Button createButton(Composite composite, String text) {
+		Button btn = new Button(composite, SWT.PUSH);
+		btn.setText(text);
+		return btn;
+	}
+}
